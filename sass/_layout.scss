@@ -9,7 +9,7 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: 1px solid var(--color-gray-light-2);
+    border-bottom: var(--line);
 
     display: flex;
     justify-content: space-between;
@@ -33,4 +33,25 @@
     background-color: #fff;
 
     flex: 1; // Significa que vai ser o restante do espaço, alem dos 18%, ou seja, 82%.
+}
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-gray-light-1);
+    border-bottom: var(--line);
+}
+
+.description {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    font-size: 1.4rem;
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+}
+
+.user-reviews {
+    background-color: greenyellow;
+    flex: 1;
 }
