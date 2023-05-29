@@ -18,6 +18,10 @@
     --line: 1px solid var(--color-gray-light-2);
 }
 
+$break-point-largest: 75em; // 1200px/16px = 75em, então 1200px = 75em
+$break-point-large: 68.75em; // 1100px/16px = 68.75em, então 1100px = 68.75em
+$break-point-medium: 56.25em; // 900px/16px = 56.25em, então 900px = 56.25em
+
 * {
     margin: 0;
     padding: 0;
@@ -32,6 +36,12 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px | 10px / 16px = 62.5%
+
+    // Faz com que o tamanho da fonte diminua ao chegar em 1100 px.
+    // Ao testar vimos que as colunas do texto estavam ficando erradas nesse tamanho
+    @media only screen and (max-width: $break-point-large) {
+        font-size: 50%;
+    }
 }
 
 body {

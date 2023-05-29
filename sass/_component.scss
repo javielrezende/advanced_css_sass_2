@@ -121,11 +121,30 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    // Controle para quando a tela for menor que 900 px.
+    @media only screen and (max-width: $break-point-medium) {
+        // Usaremos o flex nesse local para que os itens do menu não fiquem um em cima do outro nesse
+        // tamanho de tela.
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
         position: relative;
 
         &:not(:last-child) {
             margin-bottom: .5rem;
+
+            // Controle para quando a tela for menor que 900 px.
+            @media only screen and (max-width: $break-point-medium) {
+                margin: 0;
+            }
+        }
+
+        // Controle para quando a tela for menor que 900 px.
+        @media only screen and (max-width: $break-point-medium) {
+            // Usado para cada item do menu ocupar o maximo de espaço possível.
+            flex: 1;
         }
     }
 
@@ -166,6 +185,13 @@
 
         display: flex;
         align-items: center;
+
+        // Controle para quando a tela for menor que 900 px.
+        @media only screen and (max-width: $break-point-medium) {
+            // Centralizar os textos do link nessa posicao do menu
+            justify-content: center;
+            padding: 2rem;
+        }
     }
 
     &__icon {
@@ -183,6 +209,12 @@
     font-size: 1.2rem;
     text-align: center;
     padding: 2.5rem;
+
+    // Controle para quando a tela for menor que 900 px.
+    @media only screen and (max-width: $break-point-medium) {
+        // Usado para sumir o texto nesse tamanho de tela.
+        display: none;
+    }
 }
 
 ///////////////////////////////////////////////////
@@ -363,7 +395,7 @@
     }
 
     &__friends {
-
+        display: flex;
     }
 
     &__photo {
@@ -374,7 +406,7 @@
         border: 3px solid #fff;
 
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -388,6 +420,12 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    // Controle para quando a tela for menor que 900 px.
+    @media only screen and (max-width: $break-point-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     &__text {
         margin-bottom: 2rem;
@@ -447,6 +485,11 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+
+    // Controle para quando a tela for menor que 900 px.
+    @media only screen and (max-width: $break-point-medium) {
+        padding: 2.5rem 0;
+    }
 
     &__book-now {
         font-size: 2rem;

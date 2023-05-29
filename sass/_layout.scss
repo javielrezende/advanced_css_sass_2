@@ -3,6 +3,20 @@
     margin: 8rem auto;
     background-color: var(--color-gray-light-1);
     box-shadow: var(--shadow-dark);
+
+    // Controle para quando a tela for menor que 1200 px.
+    @media only screen and (max-width: $break-point-largest) {
+        // Neste ponto remove a margem ao redor de toda a tela, fazendo
+        // sumir a cor rosa de fora.
+        margin: 0;
+
+        // Aqui foi colocado porque quando diminuimos o tamanho da fonte
+        // no arquivo base, acabou diminuindo o tamanho total da largura
+        // fazendo com que apenas a margem 0 não funcionasse para esse caso,
+        // então forcamos para que ocupe 100% do espaço.
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .header {
@@ -18,6 +32,12 @@
 
 .content {
     display: flex;
+
+    // Controle para quando a tela for menor que 900 px.
+    @media only screen and (max-width: $break-point-medium) {
+        // neste ponto iremos alterar o menu para ficar em cima do conteúdo, e não mais na lateral.
+        flex-direction: column;
+    }
 }
 
 .sidebar {
@@ -41,6 +61,11 @@
     padding: 4.5rem;
     background-color: var(--color-gray-light-1);
     border-bottom: var(--line);
+
+    // Controle para quando a tela for menor que 900 px.
+    @media only screen and (max-width: $break-point-medium) {
+        padding: 3rem;
+    }
 }
 
 .description {
@@ -50,6 +75,12 @@
     padding: 3rem;
     flex: 0 0 60%;
     margin-right: 4.5rem;
+
+    // Controle para quando a tela for menor que 900 px.
+    @media only screen and (max-width: $break-point-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
 }
 
 .user-reviews {
