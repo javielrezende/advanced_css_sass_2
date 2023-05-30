@@ -21,6 +21,8 @@
 $break-point-largest: 75em; // 1200px/16px = 75em, então 1200px = 75em
 $break-point-large: 68.75em; // 1100px/16px = 68.75em, então 1100px = 68.75em
 $break-point-medium: 56.25em; // 900px/16px = 56.25em, então 900px = 56.25em
+$break-point-small: 37.5em; // 600px/16px = 37.5em, então 600px = 37.5em
+$break-point-smallest: 31.25em; // 500px/16px = 31.25em, então 500px = 31.25em
 
 * {
     margin: 0;

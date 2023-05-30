@@ -28,6 +28,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    // Controle para quando a tela for menor que 500 px.
+    @media only screen and (max-width: $break-point-smallest) {
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: 11rem;
+    }
 }
 
 .content {
@@ -66,6 +73,11 @@
     @media only screen and (max-width: $break-point-medium) {
         padding: 3rem;
     }
+
+    // Controle para quando a tela for menor que 600 px.
+    @media only screen and (max-width: $break-point-small) {
+        flex-direction: column;
+    }
 }
 
 .description {
@@ -80,6 +92,12 @@
     @media only screen and (max-width: $break-point-medium) {
         padding: 2rem;
         margin-right: 3rem;
+    }
+
+    // Controle para quando a tela for menor que 600 px.
+    @media only screen and (max-width: $break-point-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
     }
 }
 

@@ -13,6 +13,13 @@
     justify-content: center;
     align-items: center;
 
+    // Controle para quando a tela for menor que 500 px.
+    @media only screen and (max-width: $break-point-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-gray-light-2);
+    }
+
     &__input {
         font-family: inherit;
         font-size: inherit;
@@ -192,6 +199,13 @@
             justify-content: center;
             padding: 2rem;
         }
+
+        // Controle para quando a tela for menor que 600 px.
+        @media only screen and (max-width: $break-point-small) {
+            // Coloca os itens do menu em cima do texto
+            flex-direction: column;
+            padding: 1.5rem .5rem;
+        }
     }
 
     &__icon {
@@ -199,6 +213,16 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;
+
+        // Controle para quando a tela for menor que 600 px.
+        @media only screen and (max-width: $break-point-small) {
+            // Coloca os itens do menu em cima do texto
+            margin-right: 0;
+            margin-bottom: .7rem;
+            // diminui o tamanho dos icones
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 }
 
@@ -241,6 +265,12 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        // Controle para quando a tela for menor que 600 px.
+        @media only screen and (max-width: $break-point-small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
     }
 
     &__stars {
@@ -276,17 +306,32 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        // Controle para quando a tela for menor que 600 px.
+        @media only screen and (max-width: $break-point-small) {
+            padding: 0 1.5rem;
+        }
     }
 
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -3px;
+
+        // Controle para quando a tela for menor que 600 px.
+        @media only screen and (max-width: $break-point-small) {
+            font-size: 1.8rem;
+        }
     }
 
     &__rating-count {
         font-size: .8rem;
         text-transform: uppercase;
+
+        // Controle para quando a tela for menor que 600 px.
+        @media only screen and (max-width: $break-point-small) {
+            font-size: .5rem;
+        }
     }
 }
 
